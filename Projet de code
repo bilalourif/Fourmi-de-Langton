@@ -154,7 +154,6 @@ choix=Frame(fenetre)
 
 B = Button(fenetre, text='Sauvegarder', bg='cornflowerblue',  command=sauvegarder).pack()#a ajouter 
 B = Button(fenetre, text='Charger', bg='cornflowerblue',  command=charger).pack()
-B = Button(fenetre, text='Sauvegarder', bg='cornflowerblue',  command=sauvegarder).pack() # a jouter
 B= Button(fenetre,text='Play', bg='springgreen',width=7,command=play).pack(side=LEFT)
 B = Button(fenetre, text='Pause', bg='gold', width=7, command=pause).pack(side=LEFT)#NV
 B= Button(fenetre, text='Retour', bg='lightskyblue', width=7, command=retour).pack(side=RIGHT)   #(nv retour)
