@@ -149,6 +149,17 @@ def sauvegarder():
     donnees = [plateau, fourmi]
     with open("sauvegarde.pickle", "wb") as f:
         pickle.dump(donnees, f)
+        
+#a ajouter 
+def charger():
+    global plateau, fourmi
+    with open("sauvegarde.pickle", "rb") as f:
+        donnees = pickle.load(f)
+    plateau = donnees[0]
+    fourmi = donnees[1]
+    dessinerplateau()
+    placerfourmi()
+
 
 choix=Frame(fenetre)     
 
