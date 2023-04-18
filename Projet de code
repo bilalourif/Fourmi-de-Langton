@@ -7,6 +7,7 @@ fenetre=Tk()
 fenetre.title("Fourmi de Langton")
 
 vitesse = 1.0
+etats_precedents = []
 fourmi=[choice(list(range(0,10))),choice(list(range(0,10))),choice(['n','s','e','o'])]
 jeu=Canvas(fenetre, width=400, height=400, bg='white')
 plateau=[[choice(["black","white"]) for i in range(0,100)] for y in range(0,100)]
@@ -37,7 +38,7 @@ def placerfourmi():
   
    
 def action():
-    global fourmi,plateau,jeu
+    global fourmi,plateau,jeu ,etats_precedents
     i,y=fourmi[0],fourmi[1]
     print(fourmi)
     if fourmi[2]=='n':
@@ -151,6 +152,8 @@ def sauvegarder():
 
 choix=Frame(fenetre)     
 
+B = Button(fenetre, text='Sauvegarder', bg='cornflowerblue',  command=sauvegarder).pack()#a ajouter 
+B = Button(fenetre, text='Charger', bg='cornflowerblue',  command=charger).pack()
 B = Button(fenetre, text='Sauvegarder', bg='cornflowerblue',  command=sauvegarder).pack() # a jouter
 B= Button(fenetre,text='Play', bg='springgreen',width=7,command=play).pack(side=LEFT)
 B = Button(fenetre, text='Pause', bg='gold', width=7, command=pause).pack(side=LEFT)#NV
